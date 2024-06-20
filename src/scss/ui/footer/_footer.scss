@@ -1,0 +1,91 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.footer {
+    background-color: v.$primary;
+    margin-top: 5rem;
+    padding: 5rem 0 2rem 0;
+
+    &__grid{
+        @include m.tablet { 
+            @include m.grid(3, 2rem);
+            align-items: center;
+        }
+    }
+
+    &__heading {
+        color: v.$white;
+        font-size: 2rem;
+    }
+
+    &__text {
+        color: v.$white;
+    }
+
+    &__navegation {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__link {
+        color: v.$white;
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+}
+
+.myFooter {
+
+    margin-top: 6rem;
+
+    &__terms{
+        text-align: center;
+        color: v.$white;
+        font-weight: 700;
+        font-size: 2.3rem;
+    }
+}
+
+.firma {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__year {
+        color: v.$white;
+        margin: 0 .5rem;
+    }
+
+    &__name {
+        font-weight: 900;
+        font-size: 2rem;
+        color: v.$white;
+    }
+
+}
+
+.logs {
+    border-top: solid v.$white;
+    padding: 3rem 0 0 0;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+
+    &__image {
+        width: 6rem;
+        margin: 0 3rem;
+        transition-property: transform background-size;
+        transition-duration: 1s;
+
+        &:hover {
+            transform: scale(1.4);
+        }
+    }
+}
